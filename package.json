@@ -1,0 +1,34 @@
+{
+  "name": "firebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "json": "copyfiles -u 1 src/**/*.json dist",
+    "ejs": "copyfiles -u 1 src/**/*.ejs dist",
+    "start": "npm run build && node dist/server.js",
+    "build": "tsc && npm run ejs && npm run json"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.19.3",
+    "express": "^4.18.0",
+    "firebase-admin": "^10.1.0",
+    "firebase-functions": "^3.20.1"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.1",
+    "@types/compression": "^1.0.1",
+    "@types/cors": "^2.8.6",
+    "@types/crypto-js": "^3.1.43",
+    "@types/express": "^4.17.1",
+    "@types/helmet": "0.0.44",
+    "@types/node": "^17.0.29",
+    "copyfiles": "^2.2.0",
+    "node-typescript-compiler": "^3.0.0",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
